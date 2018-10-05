@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SpicePool</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+.button {
+    background-color: black;
+    color: white;
+	border: none;
+    text-align: center;
+    margin-left: 5%;
+    cursor: pointer;
+	font-family: andalus;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.button1 {font-size: 125%;}
+
+body {margin:0;}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+  
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+</style>
+
+<body>
+<!--<div id='pq'><img src="C:\Users\Bhoomika R Rao\Desktop\abstract-colorful-wallpapers-full-hd.jpg"
+height='100%' width='100%' ></div>-->
+
+<div class="row" style="background-color:white;">
+  
+		<div class="col-md-2" style="background-color:white;"><img src="34.png" style="float:left;margin-left:60px;"><br><br></div>
+		<p  style="font-size:600%;" "font-family:courier;" style="color:red;" "text-align:middle;"><b>SpicePool<b></p>
+</div>
+<ul class="topnav" id="myTopnav">
+      <li><a class="active" href="dumfp - Copy.html"><b>HOME</b></a></li>
+  <li><a class="active" href="article.html"><b>ARTICLES</b></a></li>
+  <li><a class="active" href="vegrecipe.html"><b> RECIPES</b></a></li>
+   <li><a class="active" href="hv.html"><b>GO BAKING</b></a></li>
+  <li><a class="active" href="#about"><b>REVIEWS</b></a></li>
+  <li><a class="active" href="deitandex.html"><b>HEALTH-TIPS</b></a></li>
+  <li><a class="active" href="#about"><b>VIDEOS</b></a></li>
+  <li><a class="active" href="index.php"><b>LOGIN</b></a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+  </li>
+</ul>
+
+<div style="padding-left:16px">
+  
+</div>
+
+
+<!-- Div 2--><!--BMI Calculator-->
+<br><br><br>
+	
+<div class="row">
+	<div class="col-md-3"></div>
+
+	<div class="col-md-6" style="background-color: #f3f1f1; font-family: andalus; font-size:20px;"> 
+	<br>
+	<div style="background-color:#42c4f0; font-family:Andalus; color:white;">
+	<br>
+	<p style="font-size:30px"> BODY MASS INDEX (BMI)</p>
+	<br><br>
+	</div>
+	<br>
+	<p>The Body Mass Index (BMI) Calculator can be used to calculate your BMI value and weight status while taking your age into consideration. 
+	The referenced weight range and calculation formula is listed below.</p>
+		
+	<p style="word-spacing: 50px;"> AGE: <input id="age"></p>
+	<p> GENDER: <input type="radio" name="gender" value="male"> Male <input type="radio" name="gender" value="female"> Female </p>
+	<p style="word-spacing: 18px;"> HEIGHT: <input id="feet" placeholder="Enter the height in feet"> <input id="inches" placeholder="and inches"></p>
+	<p style="word-spacing: 12px;"> WEIGHT: <input id="weight"></p>	
+	<br><br>
+	<center><button type="button" onclick="myBMI()"> CALCULATE </button></center><br>
+	<center><p id="result" style="color:green;"></p></center>
+	
+	</div>
+	
+	<div class="col-md-3"></div>
+	
+</div>
+<br><br>
+
+<div class="row">
+	<div class="col-md-3"></div>
+
+	<div class="col-md-6" style="background-color: #f3f1f1; font-family: andalus; font-size:20px;"> 
+	<br>
+	<div style="background-color:#42c4f0; font-family:Andalus; color:white;">
+	<br>
+	<p style="font-size:30px"> BMI TABLE FOR ADULTS</p>
+	<br><br>
+	</div>
+	<br>
+	<p>This is the World Health Organization's (WHO) recommended body weight based on BMI values for adults. 
+	It is used for both men and women, age 18 or older.</p>
+	<div>
+	<table>
+		<tr>
+			<th>Category</th>
+			<th>BMI Range (kg/m2)</th>
+		</tr>
+
+		<tr>
+			<td>Severe Thinness</td>
+			<td>less than 16</td>
+		</tr>
+
+		<tr>
+			<td>Moderate Thinness</td>
+			<td>16 - 17</td>
+		</tr>
+
+		<tr>
+			<td>Mild Thinness</td>
+			<td>17 - 18.5</td>
+		</tr>
+
+		<tr>
+			<td>Normal</td>
+			<td>18.5 - 25</td>
+		</tr>
+
+		<tr>
+			<td>Overweight</td>
+			<td>25 - 30</td>
+		</tr>
+
+		<tr>
+			<td>Obese Class I</td>
+			<td>30 - 35</td>
+		</tr>
+		
+		<tr>
+			<td>Obese Class II</td>
+			<td>35 - 40</td>
+		</tr>
+		
+		<tr>
+			<td>Obese Class III</td>
+			<td>More than 40</td>
+		</tr>
+	</table>
+	</div>
+	</div>
+	<br><br><br>
+	<div class="col-md-3"></div>
+	
+</div>
+<br><br>
+
+<div class="row">
+	<div class="col-md-3"></div>
+
+	<div class="col-md-6" style="background-color: #f3f1f1; font-family: andalus; font-size:20px;"> 
+	<br>
+	<div style="background-color:#42c4f0; font-family:Andalus; color:white;">
+	<br>
+	<p style="font-size:30px"> BMI CHART FOR ADULTS</p>
+	<br><br>
+	</div>
+	<br>
+	<p>This is a graph of BMI categories based on the World Health Organization data. 
+	The dashed lines represent subdivisions within a major categorization..</p>
+	<center><img src="http://www.calculator.net/img/bmi-chart.gif"></img></center>
+	</div>
+	
+	<div class="col-md-3"></div>
+	
+</div>
+<br><br><br>
+
+<div class="row">
+	<div class="col-md-3"></div>
+
+	<div class="col-md-6" style="background-color: #f3f1f1; font-family: andalus; font-size:20px;"> 
+	<br>
+	<div style="background-color:#42c4f0; font-family:Andalus; color:white;">
+	<br>
+	<p style="font-size:30px"> BMI TABLE FOR CHILDREN AND TEENS AGED 2-20</p>
+	<br><br>
+	</div>
+	<br>
+	<p>The Centers for Disease Control and Prevention (CDC) recommends BMI categorization for children and teens between age 2 and 20.</p>
+	<div>
+	<table>
+		<tr>
+			<th>Category</th>
+			<th>Percentile Range</th>
+		</tr>
+
+		<tr>
+			<td>Underweight</td>
+			<td>less than 5%</td>
+		</tr>
+
+		<tr>
+			<td>Healthy Weight</td>
+			<td>5% - 85%</td>
+		</tr>
+
+		<tr>
+			<td>At a risk of overweight</td>
+			<td>85% - 95%</td>
+		</tr>
+
+		<tr>
+			<td>Overweight</td>
+			<td>More than 95%</td>
+		</tr>
+
+	</table>
+	</div>
+	</div>
+	<br><br><br>
+	<div class="col-md-3"></div>
+	
+</div>
+<br><br>
+<!--FOOTER-->	  
+<br><br><br><br><br><br><br><br><br><br>
+<div class="row">
+	
+	<div class="col-md-6" style="background-color:black; color:white; font-family: franklin gothic; font-size: 16px; text-align: center;"><br><br><br><br>
+	<b><i class="fa fa-map-marker" aria-hidden="true" style="color:white;"></i>  ADDRESS:</b> <br><b style="color:grey;"> Unit 2, #930 G, <br> 1st D Main Road, <br> Girinagar 2nd phase, <br> Banashankari 3rd stage, <br> Bangalore - 560085 </b><br><br>
+	<b><i class="fa fa-envelope" aria-hidden="true" style="color:white;"></i>  Email Id:</b> <b style="color:grey;">spice.pool@gmail.com</b><br><br>
+	<b><i class="fa fa-globe" aria-hidden="true" style="color:white;"></i>  Website:</b> <b style="color:grey;">www.SpicePool.com</b>
+	<br><br><br><br><br>
+	</div>
+	
+	<div class="col-md-6" style="background-color:black; color:white; font-family: franklin gothic; font-size: 16px; text-align: center;"><br><br><br><br>
+	<b>Developers: </b> <br> <b style="color:grey;"><i class="fa fa-thumb-tack" aria-hidden="true" style="color:grey;"></i> Bhoomika Rao <br> 01FB15ECS069 <br><br> <i class="fa fa-thumb-tack" aria-hidden="true" style="color:grey;"></i> Chinmayee Shenvi <br> 01FB15ECS077 <br><br> <i class="fa fa-thumb-tack" aria-hidden="true" style="color:grey;"></i> Yashaswi Shetty <br> 01FB15ECS084 </b>
+	<br><br><br><br><br><br>
+	</div>
+	
+</div>
+
+<script>
+function myBMI() {
+    var age, feet, inches, weight, bmi;
+
+    age = document.getElementById("age").value;
+	feet = document.getElementById("feet").value;
+	inches = document.getElementById("inches").value;
+	weight = document.getElementById("weight").value;
+	
+	height = (parseInt(feet*12) + parseInt(inches))*0.0254;
+	bmi = weight / (height*height);
+	
+	if(bmi < 18.5)
+		text = "UNDERWEIGHT";
+	else if(bmi>18.5 && bmi<25)
+		text = "NORMAL";
+	else if(bmi>25)
+		text = "OVERWEIGHT";
+	else
+		text = "INVALID INPUT";
+		
+    document.getElementById("result").innerHTML = text;
+}
+</script>
